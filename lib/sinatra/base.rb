@@ -1383,6 +1383,7 @@ module Sinatra
       # Define a before filter; runs before all requests within the same
       # context as route handlers and may access/modify the request and
       # response.
+      # 定义了一个before filter,在同一个上下文的所有的请求的前面运行它，它可以接受/修改请求和回应
       def before(path = /.*/, **options, &block)
         add_filter(:before, path, **options, &block)
       end
@@ -1395,6 +1396,7 @@ module Sinatra
       end
 
       # add a filter
+      # 添加一个filter
       def add_filter(type, path = /.*/, **options, &block)
         filters[type] << compile!(type, path, block, **options)
       end
