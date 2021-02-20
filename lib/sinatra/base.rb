@@ -1422,6 +1422,7 @@ module Sinatra
 
       # Defining a `GET` handler also automatically defines
       # a `HEAD` handler.
+      # 处理get请求
       def get(path, opts = {}, &block)
         conditions = @conditions.dup
         route('GET', path, opts, &block)
