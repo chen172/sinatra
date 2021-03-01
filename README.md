@@ -179,7 +179,7 @@ end
 
 Route patterns may include named parameters, accessible via the
 `params` hash:
-Route patterns可能包含参数，可以通过`params` hash来获取
+(Route patterns可能包含参数，可以通过`params` hash来获取)
 
 ```ruby
 get '/hello/:name' do
