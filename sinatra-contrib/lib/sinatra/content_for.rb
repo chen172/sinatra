@@ -68,6 +68,9 @@ module Sinatra
   # layout, inside the <head> tag, and each view can call <tt>content_for</tt>
   # setting the appropriate set of tags that should be added to the layout.
   #
+  # 比如，你的其中一些views可能需要一些javascript标签和stylesheets,但是你不想在所有的也买你都有这些文件。
+  # 然后，在你的layout,你会把<%= yield_content :scripts_and_styles %>放进去。
+  # 在<head>标签
   # == Limitations
   #
   # Due to the rendering process limitation using <tt><%= yield_content %></tt>
