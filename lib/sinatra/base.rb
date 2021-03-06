@@ -1641,6 +1641,8 @@ module Sinatra
         end
       end
 
+      # verb表示来自客户端的请求时什么？get,post,
+      # path是请求的资源，block是对应的请求运行的代码
       def route(verb, path, options = {}, &block)
         enable :empty_path_info if path == "" and empty_path_info.nil?
         signature = compile!(verb, path, block, **options)
