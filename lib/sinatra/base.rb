@@ -1,6 +1,11 @@
 # coding: utf-8
 # frozen_string_literal: true
+
 # base class在909-1917行
+# Methods available to routes, before/after filters, and views.
+# Helpers模块在267-670行
+# Helpers模块是一些用在routes, before/after filters, and views的方法，base class包含了它
+
 # external dependencies
 require 'rack'
 require 'tilt'
