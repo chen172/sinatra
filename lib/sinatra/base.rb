@@ -27,6 +27,7 @@ require 'sinatra/version'
 module Sinatra
   # The request object. See Rack::Request for more info:
   # http://rubydoc.info/github/rack/rack/master/Rack/Request
+  # sinatra框架的request对象，根据rack request写的
   class Request < Rack::Request
     HEADER_PARAM = /\s*[\w.]+=(?:[\w.]+|"(?:[^"\\]|\\.)*")?\s*/
     HEADER_VALUE_WITH_PARAMS = /(?:(?:\w+|\*)\/(?:\w+(?:\.|\-|\+)?|\*)*)\s*(?:;#{HEADER_PARAM})*/
@@ -162,6 +163,7 @@ module Sinatra
   # more info:
   # http://rubydoc.info/github/rack/rack/master/Rack/Response
   # http://rubydoc.info/github/rack/rack/master/Rack/Response/Helpers
+  # sinatra框架的response对象，根据rack response对象写的
   class Response < Rack::Response
     DROP_BODY_RESPONSES = [204, 304]
 
@@ -952,7 +954,8 @@ module Sinatra
           content_type default
         end
       end
-
+  
+      # 对客户端的响应
       @response.finish
     end
 
