@@ -443,6 +443,8 @@ Use the `:static_cache_control` setting (see [below](#cache-control)) to add
 Each template language is exposed via its own rendering method. These
 methods simply return a string:
 
+每个模板语言都是通过它自己的渲染方法来exposed。这些方法返回一个字符串。
+
 ```ruby
 get '/' do
   erb :index
@@ -450,6 +452,8 @@ end
 ```
 
 This renders `views/index.erb`.
+
+这个渲染到`views/index.erb`。
 
 Instead of a template name, you can also just pass in the template content
 directly:
@@ -463,6 +467,8 @@ end
 
 Templates take a second argument, the options hash:
 
+模板可以传第二个参数，选项hash
+
 ```ruby
 get '/' do
   erb :index, :layout => :post
@@ -472,8 +478,12 @@ end
 This will render `views/index.erb` embedded in the
 `views/post.erb` (default is `views/layout.erb`, if it exists).
 
+这个将会渲染嵌入在`views/post.erb`(默认是`views/layout.erb`)中的`views/index.erb`。
+
 Any options not understood by Sinatra will be passed on to the template
 engine:
+
+任何不被Sinatra理解的选项将会被传入模板引擎中。
 
 ```ruby
 get '/' do
@@ -482,6 +492,8 @@ end
 ```
 
 You can also set options per template language in general:
+
+你可以为每个模板语言设置选项
 
 ```ruby
 set :haml, :format => :html5
